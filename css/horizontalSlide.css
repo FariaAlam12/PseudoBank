@@ -1,0 +1,21 @@
+
+.horizontalslide{
+    height: 800px;
+    margin-top:20px;
+    
+}
+
+.horizontalslide .banner {
+    width: 300px;
+    height: 100px;
+    background-color: #3B3B98;
+    color:#B33771;
+    
+    font-weight: bolder;
+    font-size: xx-large;
+
+   
+   
+
+   
+}

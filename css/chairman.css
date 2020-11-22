@@ -1,0 +1,24 @@
+body{
+    background-color:  rgb(225, 233, 247);;
+    
+    
+
+}
+
+.desig{
+
+    padding-top: 200px;
+}
+.desig p{
+    color: #182C61;
+    font-size: xx-large;
+    font-weight:bolder;
+}
+.faria-img{
+    padding-top: 40px;
+ 
+}
+h6{
+    padding-top: 30px;
+    display:inline-block;
+}

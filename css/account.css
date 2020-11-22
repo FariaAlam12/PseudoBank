@@ -1,0 +1,38 @@
+body{
+   
+    background-color: rgb(225, 233, 247);
+}
+
+.midpart h1{
+    text-align: center;
+    color: #182C61;
+    padding-top: 30px;
+}
+
+.accordion .card-header{
+    background-color:#182C61;
+}
+
+.accordion .card-header:target {
+    background-color:#182C61;
+
+}
+
+.accordion .card-body{
+    background-color: #f3f5fc;
+}
+
+.accordion h5{
+    color: whitesmoke;
+}
+
+.card .card-header a{
+    text-decoration: none;
+}
+
+.chevron1{
+
+  padding-left: 42rem;
+  
+
+}

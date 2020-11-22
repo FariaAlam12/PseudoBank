@@ -1,0 +1,339 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo2.jpg" />
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/comment.css">
+    <!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+ <!--font awesome bootstrap CDN-->
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+ <style>
+  /* Just come optional fonts and characters for styling */
+  @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Pacifico|Source+Code+Pro');
+  /* FontAwesome cdn fonts */
+  @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+  body {
+      font-family: 'Open Sans', sans-serif;
+  }
+  /* Sample styling for comments and commenting controls */
+  #allcomments {
+      width: 100%;
+      margin: 0;
+      padding: 1%;
+      border: solid 1px gray;
+      border-radius: 3px;
+      box-shadow: 2px 2px 2px silver;
+  }
+
+  ul#pastcomments {
+      list-style-type: none;
+  }
+
+  ul#pastcomments li:before {
+      font-family: FontAwesome;
+      /* content: "\f086"; */
+      content:"\f27a";
+     
+      font-size: 24pt;
+      color: gray;
+      /* margin-left: -42px; */
+      padding-right: 10px;
+      position: relative;
+      top: 8px;
+  }
+
+  ul#pastcomments li {
+      margin: 0;
+      padding: 0px;
+  }
+
+  ul#pastcomments li span {
+      font-size: 80%;
+      color: gray;
+      font-style: italic;
+  }
+
+  form#newcomment textarea {
+      height: 72px;
+  }
+
+  form#newcomment label {
+      display: inline-block;
+      margin: 1em 0 0 0;
+  }
+
+  form#newcomment textarea,
+  form#newcomment input[type="text"] {
+      margin-top: 0;
+  }
+</style>
+ 
+<title>Pseudo Bank</title>
+
+</head>
+<body class="bodyclass">
+  
+  <!--HEADER-->
+  <div class="head">
+
+    
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          
+            <a class="navbar-brand " href="#">
+              <div class="title"> <img src="logo2.jpg"  class="logo" alt="">Pseudo Bank</div>
+              
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html">Home </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About
+                  </a>
+                  <div class="dropdown-menu" style="background-color: rgb(225, 233, 247);" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="About.html">About US</a>
+                    <a class="dropdown-item" href="BoardMember.html">Board of Directors</a>
+                    
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Services
+                  </a>
+                  <div class="dropdown-menu" style="background-color: rgb(225, 233, 247);" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="Deposit.html">Deposit</a>
+                    <a class="dropdown-item" href="loan.html">Loans</a>
+                    <a class="dropdown-item" href="card.html">Card</a>
+                    
+                </li>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="account.html">Account</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Rates_charges.html">Rates_Charges</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="location.html">Location</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="recruit.html">Recruitment</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="comment.html">Query or Complains</a>
+              </li>
+              </ul>
+            </div>
+          </nav>
+          
+        </div> 
+        
+    </div>
+    
+    
+   
+  <!--HEADER END-->
+
+  <!--Form part-->
+<section class="myform">
+    <div class="container2">
+        <h1 class="brand">Query or Complain</h1>
+        <div class="wrapper">
+          <div class="PreviousComment">
+            <h3>From Other's </h3>
+            <div id="allcomments"> 
+              <div id="scrollBarForComment" style="overflow: scroll;height: 400px;">
+             
+          
+            <!-- We will show past comments in the list below-->
+            <ul id="pastcomments"></ul>
+          </div> 
+            </div> 
+           
+          </div>
+          <div class="contact">
+            <h3>Your Query Or Complain</h3>
+            <div class="alert">Your message has been sent</div>
+            <form id="newcomment">
+              <p>
+                <label for="tbName">Name</label>
+                <input type="text" name="name" id="tbName" required>
+              </p>
+             
+              <p>
+                <label>Email Address</label>
+                <input type="email" name="email" id="email" required>
+              </p>
+             
+              <p class="full">
+                <label for="txComment">Message</label>
+                <textarea name="message" rows="5" id="txComment"></textarea>
+              </p>
+              <p class="full pt-5">
+                <button type="submit" id="btnSubmitComment">Submit</button>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+</section>
+
+  <!--Form part-->
+<!-- Footer -->
+<footer class="page-footer font-small ">
+
+
+
+  <!-- Footer Links -->
+  <div class="container  mt-5">
+
+    <!-- Grid row -->
+    <div class="row pt-5">
+        <!-- Grid column -->
+      <div class="col-md-6 col-sm-12 mb-4">
+
+        <h6 class="text-white">Head Office</h6>
+        <p>
+          <i class="fa fa-map-marker mr-3"></i>Level-11, Annex-II Building,
+          Motijeel C/A,<br><span class="pl-4"> Dhaka, Bangladesh.</span>
+        </p>
+        <p>
+          <i class="fa fa-envelope mr-3"></i>pseudo12@gmail.com
+        </p>
+        <p>
+          <i class="fa fa-phone mr-3"></i> +01715934725
+        </p>
+        
+
+      </div>
+      <!-- Grid column -->
+    <!-- Grid column -->
+    <div class="col-md-6 col-sm-12 mb-4">
+      <h6 class="text-white">Help Line</h6>
+      <p>
+       
+        <i class="fa fa-phone text-white"></i><span class="text-white">16266</span>
+      </p>
+      
+
+    </div>
+    <!-- Grid column -->
+
+     
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-white py-3">© 2020 Copyright Pseudo Bank.All rights reserved
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+   
+    <!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+
+     <script>
+      // Initialize Firebase - be sure to use your own code, this connects to my database.
+      var firebaseConfig = {
+    apiKey: "AIzaSyASQ6bpV3r749cYX5Y0EDLXsHWC7WTm070",
+    authDomain: "contact-72259.firebaseapp.com",
+    databaseURL: "https://contact-72259.firebaseio.com",
+    projectId: "contact-72259",
+    storageBucket: "contact-72259.appspot.com",
+    messagingSenderId: "739509293525",
+    appId: "1:739509293525:web:ff310ad9ce977be8a9ed5c",
+    measurementId: "G-2BEQRH8ND1"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+ 
+      //Rootref is the whole database.
+      const rootRef = firebase.database().ref();
+      //commentsRef is just the pageCountsNode
+      const commentsRef = rootRef.child('comments');
+      //Listen for click on Submit Comment button, and post comment.
+      document.getElementById("btnSubmitComment").addEventListener("click", function () {
+          //Replace line breaks in comment with br tags.
+          var newcomment = document.getElementById('txComment').value.replace(/\n/g, "<br>");
+          //Define a new, keyed post.
+          var newPostRef = commentsRef.push();
+          //Fill tne new keyed post with data
+          newPostRef.set({
+              name: document.getElementById('tbName').value.trim(),
+              comment: newcomment.trim(),
+              frompage: location.pathname,
+              when: firebase.database.ServerValue.TIMESTAMP
+          });
+
+///newly added
+
+          document.querySelector('.alert').style.display = 'block';
+
+  // Step 5.4 After showing the message, redirct/or you other actions as needed. (Here, clear form, hide alert after 3 seconds and redirect to homepage)
+  //hiding the aleret after 5 sec
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },5000);
+
+  // // Clearing form
+  // document.getElementById('newcomment').reset();
+
+  //redirecting to home page
+
+  setTimeout(function(){
+    document.location.href="#";
+  },3050);///Newly added
+      });
+ 
+      function showpastcomments() {
+          var showat = document.getElementById('pastcomments');
+          //Get comments whose from page equals this page's pathname.
+          var commentsRef = firebase.database().ref('comments/').orderByChild('frompage').equalTo(location.pathname);
+          commentsRef.once('value', function (snapshot) {
+              snapshot.forEach(function (itemSnapshot) {
+                  //Get the object for one snapshot
+                  var itemData = itemSnapshot.val();
+                  var comment = itemData.comment;
+                  var name = itemData.name;
+                  var when = new Date(itemData.when).toLocaleDateString("en-us");
+                  showat.innerHTML += "<li>" + comment + "<span> -- " + name + " (" + when +
+                      ")</span></li>";
+              })
+          })
+      }
+      //Called when page first opens and also after Submit button click to show all comments for this page.
+      showpastcomments()
+  </script>
+ 
+
+
+ <script src="header.js"></script>
+
+</body>
+</html>

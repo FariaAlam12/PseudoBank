@@ -1,0 +1,45 @@
+.loan{
+    background-color: rgb(225, 233, 247);
+    
+}
+
+.middle h1{
+    padding-top: 30px;
+    color: #000066;
+}
+
+.saving-para, .current-para, .personalloan-para ,.homeloan-para,.CreditCard-para,.DebitCard-para,.carloan-para{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+li{
+    color: darkblue; 
+}
+
+.saving-para h2, .current-para h2 ,.personalloan-para h2,.homeloan-para h2 , .CreditCard-para h2, .DebitCard-para h2,.carloan-para h2{
+    
+    color:#cc0052;
+}
+
+.saving-para h3, .current-para h3 ,.personalloan-para h3,.homeloan-para h3 , .CreditCard-para h3, .DebitCard-para h3,.carloan-para h3{
+    padding-left: 25px;
+    color: #660035;
+    
+}
+.saving-img, .current-para{
+    
+    padding-top: 50px;
+    padding-left: 400px;
+    
+}
+
+.current-img , .personalloan-img, .homeloan-img, .credit-img,.debit-img,.carloan-img{
+    padding-top: 40px;
+}
+
+p{
+    color: darkblue;
+    padding-left: 25px;
+}

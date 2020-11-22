@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.outer{
+    background-image: url("glass.png");
+    height: 500px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.inner{
+    background-color: white;
+    opacity: 0.6;
+    width: 600px;
+    height: 300px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 15px;
+    animation: Slide_up 1s ease;
+    
+    
+}
+.mission-vision{
+    padding-left: 50px;
+}
+
+.mission-para{
+    width: 600px;
+    height: 300px;
+    padding-top: 60px;
+    padding-left: 50px;
+    padding-right: 15px;
+}
+
+
+
+.mission-img{
+    margin-top:20px;
+    margin-left: 40px;
+    background-image: url("vm.png");
+
+    height:400px;
+    width: 400px;
+  
+}
+
+
+.inner h1,h6{
+    color: #2f3640;
+}
+
+.inner h6{
+    font-weight: bold;
+}
+
+.mission-para h1 ,.value-para h1{
+    color: #182C61;
+
+}
+.value-img{
+    
+    width: 400px;
+    height: 400px;
+}
+.value-para{
+    margin-left: 70px;
+    margin-top: 80px;
+
+    color: darkblue;
+}
+
+
+.value-para li{
+    color: black;
+}
+
+.value-main-div .value-para{
+    max-width: 500px;
+}
+
+
+
+
+
+
+@keyframes Slide_up{
+    0%{
+        transform:translateY(250px)
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+
+

@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(225, 233, 247);
+   
+}
+
+
+.image{
+    position: relative;
+    width:400px;
+    
+}
+
+.image_img{
+    display: block;
+    padding-left: 180px;
+    padding-top: 150px;
+    width:100%;
+}
+
+.image_overlay1 ,.image_overlay2{
+    position: absolute;
+    top:90;
+    left:180;
+    width:60%;
+    height:90%;
+    background:rgba(225, 233, 247,0.8);
+    color:#ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+
+}
+.image_overlay1 > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+
+}
+
+.image_overlay2 > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+
+}
+
+.image_overlay1:hover
+{
+    opacity: 1;
+}
+
+
+
+.image_overlay2:hover
+{
+    opacity: 1;
+}
+
+.image_overlay1:hover > *{
+    transform:translateY(0);
+   
+}
+
+.image_overlay2:hover > *{
+    transform:translateY(0);
+    
+}
+
+.image_text{
+    font-size: large;
+    font-weight: bold;
+}
+
+.image_text a:hover{
+  
+   text-decoration: none;
+}
+
+/*Description of photo*/
+h3{
+    color: #660035;
+    padding-left: 220px;
+}
